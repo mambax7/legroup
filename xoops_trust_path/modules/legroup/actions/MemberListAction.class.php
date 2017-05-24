@@ -105,7 +105,7 @@ class Legroup_MemberListAction extends Legroup_AbstractListAction
         if(! $this->_getHandler()->isMember($this->_getGroupId(), Legacy_Utils::getUid(), Lenum_GroupRank::STAFF)){
             $cri->add(new Criteria('status', Lenum_WorkflowStatus::FINISHED));
         }
-        $this->mObjects =& $handler->getObjects($cri);
+        $this->mObjects = $handler->getObjects($cri);
     
         return LEGROUP_FRAME_VIEW_INDEX;
     }

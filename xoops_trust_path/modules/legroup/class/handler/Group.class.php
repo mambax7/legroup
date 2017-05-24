@@ -251,7 +251,7 @@ class Legroup_GroupObject extends Legacy_AbstractGroupObject
 	{
 		if ($this->_mMemberLoadedFlag == false) {
 			$handler = Legacy_Utils::getModuleHandler('member', $this->getDirname());
-			$this->mMember =& $handler->getObjects(new Criteria('group_id', $this->get('group_id')));
+			$this->mMember = $handler->getObjects(new Criteria('group_id', $this->get('group_id')));
 			$this->_mMemberLoadedFlag = true;
 		}
 	}
@@ -267,7 +267,7 @@ class Legroup_GroupObject extends Legacy_AbstractGroupObject
 	{
 		if ($this->_mPolicyLoadedFlag == false) {
 			$handler = Legacy_Utils::getModuleHandler('policy', $this->getDirname());
-			$this->mPolicy =& $handler->getObjects(new Criteria('group_id', $this->get('group_id')));
+			$this->mPolicy = $handler->getObjects(new Criteria('group_id', $this->get('group_id')));
 			$this->_mPolicyLoadedFlag = true;
 		}
 	}

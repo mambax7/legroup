@@ -47,7 +47,7 @@ class Legroup_GroupMylistAction extends Legroup_GroupListAction
         $handler =& $this->_getHandler();
         $cri = $this->mFilter->getCriteria();
         $cri->add(new Criteria('group_id', $ids, 'IN'));
-        $this->mObjects =& $handler->getObjects($cri);
+        $this->mObjects = $handler->getObjects($cri);
     
         return LEGROUP_FRAME_VIEW_INDEX;
     }

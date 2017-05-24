@@ -105,7 +105,7 @@ abstract class Legroup_AbstractListAction extends Legroup_AbstractAction
 		$this->mFilter->fetch();
 	
 		$handler =& $this->_getHandler();
-		$this->mObjects =& $handler->getObjects($this->mFilter->getCriteria());
+		$this->mObjects = $handler->getObjects($this->mFilter->getCriteria());
 	
 		return LEGROUP_FRAME_VIEW_INDEX;
 	}
